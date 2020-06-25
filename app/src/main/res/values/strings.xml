@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">YonCoffee</string>
+    <string name="txt_next">Tiếp tục</string>
+    <string name="txt_phone_number">Số điện thoại</string>
+    <string name="txt_noti_valid_phonenumber">Số điện thoại không hợp lệ!</string>
+    <string name="txt_noti_valid_pass">Sai mật khẩu!</string>
+    <string name="txt_password">Mật khẩu</string>
 </resources>
