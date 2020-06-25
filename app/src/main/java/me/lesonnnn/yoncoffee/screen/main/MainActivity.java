@@ -1,4 +1,4 @@
-package me.lesonnnn.yoncoffee.screen;
+package me.lesonnnn.yoncoffee.screen.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

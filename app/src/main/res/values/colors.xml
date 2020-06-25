@@ -5,4 +5,7 @@
     <color name="colorAccent">#F8E8D4</color>
     
     <color name="gray">#D8D8D8</color>
+    <color name="coffee">#B67859</color>
+    <color name="yellow">#f1c40f</color>
+    <color name="red">#e74c3c</color>
 </resources>

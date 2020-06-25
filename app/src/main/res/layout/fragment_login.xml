@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/img_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:src="@drawable/illustration"
+        android:background="@drawable/bg_illustration"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription"
+        />
+
+    <EditText
+        android:id="@+id/edtPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_48"
+        android:background="@drawable/bg_edt"
+        android:hint="@string/txt_phone_number"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/img_login"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,TextFields"
+        />
+
+    <TextView
+        android:id="@+id/tvNotiLoginPhone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/txt_noti_valid_phonenumber"
+        android:gravity="right"
+        android:visibility="invisible"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/edtPhoneNumber"
+        app:layout_constraintStart_toStartOf="@id/edtPhoneNumber"
+        app:layout_constraintEnd_toEndOf="@id/edtPhoneNumber"
+        tools:ignore="RtlHardcoded"
+        />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_edt"
+        android:hint="@string/txt_password"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:singleLine="true"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotiLoginPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="Autofill,TextFields"
+        />
+
+    <TextView
+        android:id="@+id/tvNotiLoginPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:text="@string/txt_noti_valid_pass"
+        android:gravity="right"
+        android:visibility="invisible"
+        android:layout_marginEnd="@dimen/dp_20"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword"
+        tools:ignore="RtlHardcoded"
+        />
+
+    <Button
+        android:id="@+id/btnLoginNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/bg_btn"
+        android:text="@string/txt_next"
+        app:layout_constraintTop_toBottomOf="@+id/tvNotiLoginPass"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
