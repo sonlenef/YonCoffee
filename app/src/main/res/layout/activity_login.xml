@@ -1,8 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/layoutLogin"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
+
+    <ImageView
+        android:id="@+id/img_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_300"
+        android:background="@drawable/bg_illustration"
+        android:src="@drawable/illustration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_20"
+        android:hint="@string/txt_phone_number"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/red"
+        app:boxCornerRadiusTopStart="@dimen/dp_50"
+        app:boxCornerRadiusTopEnd="@dimen/dp_50"
+        app:boxCornerRadiusBottomStart="@dimen/dp_50"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_login"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPass"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:hint="@string/txt_password"
+        app:boxStrokeColor="@color/colorPrimaryDark"
+        app:boxCornerRadiusTopStart="@dimen/dp_50"
+        app:boxCornerRadiusTopEnd="@dimen/dp_50"
+        app:boxCornerRadiusBottomStart="@dimen/dp_50"
+        app:boxCornerRadiusBottomEnd="@dimen/dp_50"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:hintTextColor="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/dp_20"
+            android:paddingEnd="@dimen/dp_20"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnLoginNext"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/bg_btn"
+        android:text="@string/txt_next"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilPass"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

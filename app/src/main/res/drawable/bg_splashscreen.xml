@@ -10,6 +10,7 @@
         android:gravity="center"
         android:width="@dimen/dp_180"
         android:height="@dimen/dp_200"
+        android:top="-50dp"
         tools:ignore="UnusedAttribute">
     </item>
 </layer-list>
