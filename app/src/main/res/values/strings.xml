@@ -5,4 +5,7 @@
     <string name="txt_noti_valid_phonenumber">Số điện thoại không hợp lệ!</string>
     <string name="txt_noti_valid_pass">Sai mật khẩu!</string>
     <string name="txt_password">Mật khẩu</string>
+    <string name="xin_chao">Xin chào,</string>
+    <string name="_0">0</string>
+    <string name="espresso">Espresso</string>
 </resources>
