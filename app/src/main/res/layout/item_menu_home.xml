@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/lnItemMenuHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/imgItemMenu"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_30"
+            android:src="@drawable/espresso"
+            tools:ignore="ContentDescription"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ctlItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tvItemMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/espresso"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sp_24"
+                app:layout_constraintBottom_toBottomOf="@id/ctlItemTitle"
+                app:layout_constraintEnd_toStartOf="@id/icNext"
+                app:layout_constraintStart_toStartOf="@id/ctlItemTitle"
+                app:layout_constraintTop_toTopOf="@id/ctlItemTitle"
+                />
+
+            <ImageView
+                android:id="@+id/icNext"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:src="@drawable/ic_baseline_next"
+                app:layout_constraintBottom_toBottomOf="@id/ctlItemTitle"
+                app:layout_constraintEnd_toEndOf="@id/ctlItemTitle"
+                app:layout_constraintTop_toTopOf="@id/ctlItemTitle"
+                tools:ignore="ContentDescription"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="@id/lnItemMenuHome"
+        app:layout_constraintStart_toStartOf="@id/lnItemMenuHome"
+        app:layout_constraintTop_toBottomOf="@id/lnItemMenuHome"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
