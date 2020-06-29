@@ -8,4 +8,15 @@
     <string name="xin_chao">Xin chào,</string>
     <string name="_0">0</string>
     <string name="espresso">Espresso</string>
+    <string name="ic_them">+</string>
+    <string name="ic_bot">-</string>
+    <string name="_1">1</string>
+    <string name="size">Cỡ</string>
+    <string name="sugar">Đường</string>
+    <string name="ice">Đá</string>
+    <string name="total">Tổng:</string>
+    <string name="th_m_v_o_gi">Thêm vào giỏ</string>
+    <string name="s_th_ch">Sở thích</string>
+    <string name="nong">Nóng</string>
+    <string name="lanh">Lạnh</string>
 </resources>
