@@ -33,11 +33,13 @@
             android:gravity="center"
             android:text="@string/espresso"
             android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
             />
 
     </androidx.cardview.widget.CardView>
 
     <FrameLayout
+        android:id="@+id/flBanner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_200"
         android:background="@color/colorAccent"
@@ -60,5 +62,310 @@
             tools:ignore="ContentDescription"
             />
     </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toTopOf="@id/btnThemVaoGioHang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flBanner"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tvTenSP"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/espresso"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tvSoLuong"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical|right"
+                android:paddingStart="@dimen/dp_10"
+                android:paddingEnd="@dimen/dp_20"
+                android:singleLine="true"
+                android:text="@string/_1"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@id/btnBotSL"
+                app:layout_constraintStart_toEndOf="@+id/tvTenSP"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded"
+                />
+
+            <Button
+                android:id="@+id/btnBotSL"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:background="@drawable/bg_btn_bot"
+                android:text="@string/ic_bot"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintBottom_toBottomOf="@id/tvSoLuong"
+                app:layout_constraintEnd_toStartOf="@id/btnThemSL"
+                app:layout_constraintTop_toTopOf="@id/tvSoLuong"
+                />
+
+            <Button
+                android:id="@+id/btnThemSL"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_48"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:background="@drawable/bg_btn_them"
+                android:text="@string/ic_them"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_20"
+                app:layout_constraintBottom_toBottomOf="@id/tvSoLuong"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvSoLuong"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#4D2D140D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSoLuong"
+                />
+
+            <TextView
+                android:id="@+id/tvSizeSP"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/size"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@id/tvSoLuong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTenSP"
+                />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvSizeSP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvSizeSP"
+                app:layout_constraintTop_toTopOf="@id/tvSizeSP"
+                >
+
+                <RadioButton
+                    android:id="@+id/btnSizeNho"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_30"
+                    android:layout_marginBottom="-10dp"
+                    android:background="@drawable/coc_nho"
+                    android:button="@android:color/transparent"
+                    />
+
+                <RadioButton
+                    android:id="@+id/btnSizeVua"
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginBottom="-5dp"
+                    android:background="@drawable/coc"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/btnSizeLon"
+                    android:layout_width="@dimen/dp_45"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:background="@drawable/coc"
+                    android:button="@android:color/transparent"
+                    />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#4D2D140D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSizeSP"
+                />
+
+            <TextView
+                android:id="@+id/tvSugarSP"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/sugar"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@id/tvSoLuong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSizeSP"
+                />
+
+            <RadioGroup
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvSugarSP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvSugarSP"
+                app:layout_constraintTop_toTopOf="@id/tvSugarSP"
+                >
+
+                <RadioButton
+                    android:id="@+id/btnKhongDuong"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/khong_duong"
+                    android:button="@android:color/transparent"
+                    />
+
+                <RadioButton
+                    android:id="@+id/btnItDuong"
+                    android:layout_width="@dimen/dp_15"
+                    android:layout_height="@dimen/dp_15"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/it_duong"
+                    android:button="@android:color/transparent"
+                    />
+
+                <RadioButton
+                    android:id="@+id/btnVuaDuong"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/vua_duong"
+                    android:button="@android:color/transparent"
+                    android:checked="true"
+                    />
+
+                <RadioButton
+                    android:id="@+id/btnNhieuDuong"
+                    android:layout_width="@dimen/dp_30"
+                    android:layout_height="@dimen/dp_30"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/nhieu_duong"
+                    android:button="@android:color/transparent"
+                    />
+
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#4D2D140D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSugarSP"
+                />
+
+            <TextView
+                android:id="@+id/tvIceSP"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/ice"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintEnd_toStartOf="@id/tvSoLuong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvSugarSP"
+                />
+
+            <RadioGroup
+                android:id="@+id/rgIceSP"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvIceSP"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvIceSP"
+                app:layout_constraintTop_toTopOf="@id/tvIceSP"
+                >
+
+                <RadioButton
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:background="@drawable/khong_da"
+                    android:button="@android:color/transparent"
+                    />
+
+                <RadioButton
+                    android:layout_width="@dimen/dp_35"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:background="@drawable/co_da"
+                    android:button="@android:color/transparent"
+                    />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#4D2D140D"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIceSP"
+                />
+
+            <TextView
+                android:id="@+id/tvTotalSP"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_100"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_10"
+                android:singleLine="true"
+                android:text="@string/total"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/tvSoLuong"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIceSP"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnThemVaoGioHang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_48"
+        android:layout_margin="@dimen/dp_20"
+        android:background="@drawable/bg_btn"
+        android:text="@string/th_m_v_o_gi"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
